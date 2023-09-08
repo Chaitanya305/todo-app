@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    environment{
+        PASS=credentials('docker_hub_pass')
+    }
+    stages{
+        stage(build){
+            steps{
+                sh '''
+                ./build.sh
+                '''
+            }
+        }
+        stage(push){
+            steps{
+                sh '''
+                ./push.sh
+                '''
+            }
+        }
+        stage(deploy){
+            steps{
+                sh '''
+                ./deploy.sh
+                '''
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+version: "3"
+services: 
+  app:
+    image: chaitanya305/$IMAGE:$BUILD_TAG
+    ports:
+      - "8000:8001"
+    
