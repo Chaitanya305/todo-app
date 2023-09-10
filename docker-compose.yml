@@ -7,3 +7,5 @@ services:
     container_name: to-do-app
     ports:
       - "8000:8001"
+    options: 
+      rm: true
