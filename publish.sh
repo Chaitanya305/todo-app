@@ -6,6 +6,8 @@ export BUILD_TAG=$(sed -n "3p" /tmp/auth.txt)
 
 docker login -u chaitanya305 -p $PASS
 
+mkdir ~/maven 
+
 cd ~/maven
 
 docker compose up -d
